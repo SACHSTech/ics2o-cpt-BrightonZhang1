@@ -11,10 +11,10 @@ Created: date 01/26/2021
 --------------------------
 '''
 
-#play again
+#play again function for quick access
 def play():
     answer = input("Would you like to play? Yes or No: ")
-    
+    #while loop to determine 
     while answer.lower().strip() != "yes" and answer.lower().strip() != "no":
         time.sleep(1.5)
         print ("Type a viable option!")
@@ -549,13 +549,13 @@ def altquiz():
     time.sleep(1.5)
     print("Unfortunately, halfway through the quiz, you bleed out due to your leg. Maybe you should patch that wound up next time... ")
     time.sleep(1.5)
-    death_eight = input("Would you like to go to the start of the quiz or restart the game? Quiz/Quit/Restart: ")
+    death_eight = input("Would you like to restart? Yes/No: ")
         
-    while death_eight.lower().strip() != "back" and death_eight.lower().strip() != "quit":
+    while death_eight.lower().strip() != "yes" and death_eight.lower().strip() != "no":
         time.sleep(1.5)
-        print("Type Back or Restart!")
+        print("Type Yes or No!")
         time.sleep(1.5)
-        death_eight = input("Would you like to go back to the start of the game? Yes/No: ")
+        death_eight = input("Would you like to restart? Yes/No: ")
 
     if death_eight.lower().strip() == "yes":
         time.sleep(1.5)
@@ -814,18 +814,18 @@ def quiz():
         print("Unfortunately, that quiz was life or death. You failed to answer 6 questions correctly and as a result, you remain trapped in the rooms for all of eternity. ")
 
         time.sleep(2.5)
-        death_seven = input("Would you like to go to the start of the quiz or restart the game? Quiz/Quit/Restart: ")
+        death_seven = input("Would you like to go to restart the game? Yes/No: ")
         
-        while death_seven.lower().strip() != "back" and death_seven.lower().strip() != "quit":
+        while death_seven.lower().strip() != "yes" and death_seven.lower().strip() != "no":
             time.sleep(1.5)
-            print("Type Back or Restart!")
+            print("Type Yes or No!")
             time.sleep(1.5)
-            death_seven = input("Would you like to go back to the start of the quiz? Yes/No: ")
+            death_seven = input("Would you like to go to restart the game? Yes/No: ")
 
         if death_seven.lower().strip() == "yes":
             time.sleep(1.5)
             play()
-        #Cyclomatic Complexity limiting options again. Max 15
+#Cyclomatic Complexity limiting options again. Max 15
 def ending():
     time.sleep(1.5)
     print("You have successfully answered more than 6 questions on the quiz! The mysterious figure keeps its promise and lets you go. You head up to the surface, only to realize that your world is still in chaos.")
